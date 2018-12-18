@@ -39,5 +39,5 @@ NNNNNNNN         NNNNNNNZZZZZZZZZZZZZZZZZZZ
 
 <body >
 	<?php include(locate_template('menu.php'));?>
-	<?php include(locate_template('test.php'));?>
+	
 	
