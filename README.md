@@ -1,4 +1,7 @@
 # NickZack-Theme
+
+1.0.0
+
 NickZack wordpress development theme, as bare bones as it can be, includes GULP and auto JS deployment based on page url. work in progress.
 
 
