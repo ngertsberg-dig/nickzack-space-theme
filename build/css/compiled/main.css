@@ -1,9 +1,19 @@
 body {
   font-size: 16px; }
 
-.page-view.homepage h1 {
+.page-view {
+  min-height: 100vh;
+  max-width: 100vw; }
+
+.page-view.contact * {
   border: 2px solid red; }
-  .page-view.homepage h1:after {
-    content: 'sass loaded';
-    padding-left: 2em;
-    color: red; }
+
+.page-view.homepage h1:after {
+  content: 'sass loaded';
+  padding-left: 2em;
+  color: red; }
+
+#menu {
+  position: fixed;
+  right: 0px;
+  height: 100vh; }

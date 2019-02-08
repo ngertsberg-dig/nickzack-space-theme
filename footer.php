@@ -1,6 +1,6 @@
 <footer>
 
-<h2> footers</h2>
+<h2> footer</h2>
 
 </footer>
 
@@ -14,8 +14,9 @@ if(is_single() != 1){
 else{
 	$name = $post -> post_type;
 }
-$scriptToLoad = WP_CONTENT_URL . '/themes/nickzack/build/js/'.$name.'.js';
-$loadMenu = WP_CONTENT_URL . '/themes/nickzack/build/js/menu.js';
+$theme = get_template_directory_uri() . '/';
+$scriptToLoad = $theme.'build/js/'.$name.'.js';
+$loadMenu  = $theme.'/build/js/menu.js';
 ?>
 <script src = <?php echo $scriptToLoad;?>></script>
 <script src = <?php echo $loadMenu;?>></script>

@@ -23,6 +23,8 @@ gulp.task('sass', function () {
 gulp.task('watch',function(){
     gulp.watch('./build/css/*/*.sass', gulp.series('sass'));
     gulp.watch('./build/css/*/*.sass',browserSync.reload);
+    gulp.watch('./build/html/*/*.php',browserSync.reload);
+    gulp.watch('./build/js/*.js',browserSync.reload);
 })
 
 gulp.task('minify', function () {
