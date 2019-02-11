@@ -1,7 +1,7 @@
 <?php
 ?>
 
-<div id = 'menu'>
+<div id = 'menuButton' @click = 'menuClick'>
 	<h1> MENU</h1>
 	<ul>
 		<li><a href = '/'>HOME</a></li>

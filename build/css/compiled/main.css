@@ -5,15 +5,16 @@ body {
   min-height: 100vh;
   max-width: 100vw; }
 
-.page-view.contact * {
-  border: 2px solid red; }
 
 .page-view.homepage h1:after {
   content: 'sass loaded';
   padding-left: 2em;
   color: red; }
 
-#menu {
+#menuButton {
   position: fixed;
   right: 0px;
-  height: 100vh; }
+  border: 2px solid red;
+  height: auto; }
+  #menuButton:hover {
+    cursor: pointer; }
