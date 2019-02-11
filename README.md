@@ -10,4 +10,11 @@ npm install gulp-sass
 
 gulp watchAll to enable browsersync and make live site sass changes that compile to /build/css/compiled/main.css
 
-gulp min  to minifiy /build/css/compiled/main.css and put it in /build/css/compiled/minified/main.css - for production 
+gulp min  to minifiy /build/css/compiled/main.css and put it in /build/css/compiled/minified/main.css - for production
+
+comes with:
+  SwiperJS
+  GSAP
+  VueJS
+  jQuery
+  Font Awesome
