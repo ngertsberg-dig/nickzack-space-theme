@@ -4,6 +4,7 @@ var menu = new Vue({
 	},
 	beforeMount(){
 		this.init();
+		
 	},
 	methods:{
 		init(){

@@ -1,5 +1,66 @@
+@import 'variables.sass'
+
 body
 	font-size: 16px
+	overflow: hidden
+	+laptop
+		font-size: 14px
+	+mobile
+		font-size: 12px
+	+phone
+		font-size: 11px
+p
+	font-family: $font2
+	line-height: 1.2em
 .page-view
 	min-height: 100vh
 	max-width: 100vw
+.button
+	color: white
+	margin-top: 20px
+	a
+		color: white
+		border-radius: 5px
+		background-color: $blue5
+		text-decoration: none
+		font-family: $font2
+		border: 1px solid $blue1
+		padding: 10px
+		text-transform: uppercase
+		display: block
+		position: relative
+		&:hover
+			&:after
+				transition: transform 0.35s ease
+				
+				transform: scaleY(0)
+				transform-origin: 50% 50%
+			&:before
+				transition: transform 0.35s ease
+				
+				transform: scaleY(0)
+				transform-origin: 50% 50%
+		&:after
+			transition: transform 0.35s ease
+			transform-origin: 50% 50%
+			content: ''
+			position: absolute
+			top: 0px
+			left: -1px
+			height: 90%
+			top: 5%
+			width: 1px
+			background-color: transparent
+			border-left: 1px solid $blue5
+		&:before
+			transition: transform 0.35s ease
+			transform-origin: 50% 50%
+			content: ''
+			position: absolute
+			top: 0px
+			right: -1px
+			height: 90%
+			top: 5%
+			width: 1px
+			background-color: transparent
+			border-right: 1px solid $blue5

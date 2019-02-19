@@ -1,6 +1,529 @@
+@import 'variables.sass'
 .page-view.homepage
-	h1
-		&:after
-			content: 'sass loaded'
-			padding-left: 2em
-			color: red
+	background-color: #0e0b13
+	display: flex
+	align-items: center
+	justify-content: center
+	+laptop
+	#smallMenu
+	
+		position: absolute !important
+		right: 40px !important
+		top: 40px !important
+		width: 100px !important
+		height: 100px !important
+		z-index: 99
+		&:hover
+			cursor: pointer
+	#audioRequest
+		position: absolute
+		z-index: 99
+		background-color: rgba(0,0,0,0.9)
+		padding: 100px
+		border-radius: 20px
+		color: white
+		text-align: center
+		opacity: 0
+
+		p
+			margin-top: 20px
+		img
+			width: 50px !important
+	canvas#canvas
+		position: absolute
+		top: 0px
+		left: 0px
+	.intro
+		position: absolute
+		color: white
+		h4
+			font-family: $font3
+			text-transform: uppercase
+			font-weight: 300
+			font-size: 1.4em
+			position: relative
+			&:hover
+				cursor: pointer
+				&:after
+					transition: width 0.35s ease
+					width: 100%
+			&:after
+				transition: width 0.35s ease
+				content: ''
+				position: absolute
+				bottom: -15px
+				height: 1px
+				background-color: $blue0
+				width: 50%
+				left: 0px
+
+
+
+	.holo-ui
+		opacity: 0
+		width: 35vw
+		height: 85vh
+		z-index: 99
+		background-color: $blue6
+		background: $blue6
+		background: -moz-linear-gradient(45deg, transparent 20px, $blue6 20px), -moz-linear-gradient(135deg, transparent 20px, $blue6 20px), -moz-linear-gradient(225deg, transparent 20px, $blue6 20px), -moz-linear-gradient(315deg, transparent 20px, $blue6 20px)
+		background: -o-linear-gradient(45deg, transparent 20px, $blue6 20px), -o-linear-gradient(135deg, transparent 20px, $blue6 20px), -o-linear-gradient(225deg, transparent 20px, $blue6 20px), -o-linear-gradient(315deg, transparent 20px, $blue6 20px)
+		background: -webkit-linear-gradient(45deg, transparent 20px, $blue6 20px), -webkit-linear-gradient(135deg, transparent 20px, $blue6 20px), -webkit-linear-gradient(225deg, transparent 20px, $blue6 20px), -webkit-linear-gradient(315deg, transparent 20px, $blue6 20px)
+		background-position: bottom left, bottom right, top right, top left
+		-moz-background-size: 50% 50%
+		-webkit-background-size: 50% 50%
+		background-size: 50.01% 50.01%
+		background-repeat: no-repeat
+		position: absolute
+		.go-back-button#welcome
+			position: absolute
+			left: 5em
+			color: white
+			font-family: $font3
+			font-size: 0.85em
+			transform: translateY(2.5px)
+			transition: color 0.35s ease
+			&:before
+				content: '<'
+				position: absolute
+				height: 100%
+				display: flex
+				align-items: center
+				top: 0px
+				left: -1em
+			&:hover
+				cursor: pointer
+				color: $blue1
+				transition: color 0.35s ease
+		.top-title
+			position: relative
+			background-color: $blue7
+			background: -webkit-linear-gradient(-45deg, transparent 20px, $blue7 10px), -webkit-linear-gradient(135deg, transparent 0px, $blue7 0px),-webkit-linear-gradient(225deg, transparent 10px, $blue7 10px), -webkit-linear-gradient(315deg, transparent 0px, $blue7 0px)
+			background-position: top left, bottom right,top right, bottom left
+			background-size: 50.03% 50.03%
+			background-repeat: no-repeat
+			width: 90%
+			margin: 0 auto
+			margin-top: 20px
+			padding-top: 1.2em
+			padding-bottom: 1.2em
+
+			h3
+				color: white
+				text-align: center
+				font-family: $font3
+				font-size: 1.2em
+		.projects-section.buttons.button-quad
+			width: 90%
+			margin: 0 auto
+			display: flex
+			flex-wrap: wrap
+			.button
+				width: 49%
+				text-align: center
+				&:nth-child(2n + 2)
+					margin-left: 1%
+		@keyframes seperatorAnimation
+			0%
+				left: 0%
+
+			50%
+				left: 90%
+			100%
+				left: 0%
+		.seperator
+			height: 3px
+			width: 90%
+			margin: 0 auto
+			position: relative
+			background-color: $blue7
+			overflow: hidden
+			.seperator-line
+				height: 100%
+				width: 10%
+				background-color: $blue1
+				z-index: 9
+				left: 0%
+				position: absolute
+				animation: seperatorAnimation 5s infinite ease-in-out
+
+		.paragraph-text
+			color: white
+			width: 90%
+			margin: 0 auto
+			background-color: $blue7
+			margin-top: 1em
+			margin-bottom: 1em
+			border-top-left-radius: 5px
+			border-bottom-right-radius: 5px
+			position: relative
+			.gradient-line
+				&:nth-child(1)
+					position: absolute
+					width: 50%
+					height: 2px
+					top: 0px
+					right: 5%
+					background: -webkit-gradient(radial, 100% 50%, 0, 0% 50%, 220, from(transparent), to($blue1))
+				&:nth-child(2)
+					position: absolute
+					width: 50%
+					height: 2px
+					top: 0px
+					left: 5%
+					background: -webkit-gradient(radial, 0% 0%, 0, 0% 50%, 220, from(transparent), to($blue1))
+				&:nth-child(3)
+					position: absolute
+					width: 50%
+					height: 2px
+					bottom: 0px
+					right: 5%
+					background: -webkit-gradient(radial, 100% 50%, 0, 0% 50%, 220, from(transparent), to($blue1))
+				&:nth-child(4)
+					position: absolute
+					width: 50%
+					height: 2px
+					bottom: 0px
+					left: 5%
+					background: -webkit-gradient(radial, 0% 0%, 0, 0% 50%, 220, from(transparent), to($blue1))
+			p
+				font-family: $font2
+				padding: 1em
+
+		.outside-line
+			&:nth-child(1)
+				position: absolute
+				height: 0px
+				background-color: $blue1
+				width: 40px
+				top: 5px
+				border-top-right-radius: 20px
+				border-top-left-radius: 20px
+				border-top: 2px solid $blue1
+				border-bottom: 1px solid $blue1
+				left: -15px
+				transform: rotateZ(-45deg)
+			&:nth-child(2)
+				position: absolute
+				height: 0px
+				background-color: $blue1
+				width: 40px
+				bottom: 5px
+				border-bottom-right-radius: 20px
+				border-bottom-left-radius: 20px
+				border-top: 1px solid $blue1
+				border-bottom: 2px solid $blue1
+				right: -15px
+				transform: rotateZ(-45deg)
+			&:nth-child(3)
+				position: absolute
+				height: 0px
+				background-color: $blue1
+				width: 25px
+				border-bottom-right-radius: 20px
+				border-bottom-left-radius: 20px
+				border-top: 1px solid $blue1
+				border-bottom: 2px solid $blue1
+				right: -15px
+				bottom: -2.5px
+				transform: rotateZ(-45deg)
+		.edge
+			//top left
+			//top left edge
+			&:nth-child(4)
+				position: absolute
+				top: 13px
+				left: -7px
+				height: 4px
+				background-color: $blue1
+				width: 40px
+				transform: rotateZ(-45deg)
+			//top left bottom
+			&:nth-child(5)
+				position: absolute
+				top: 61px
+				left: -35.5px
+				height: 4px
+				background-color: $blue1
+				width: 70px
+				transform: rotateZ(-90deg)
+			//top left right
+			&:nth-child(6)
+				position: absolute
+				top: 0px
+				left: 25px
+				height: 4px
+				background-color: $blue1
+				width: 70px
+
+
+			//top right
+			//top right edge
+			&:nth-child(7)
+				position: absolute
+				top: 13px
+				right: -7px
+				height: 4px
+				background-color: $blue1
+				width: 40px
+				transform: rotateZ(45deg)
+			//top right bottom
+			&:nth-child(8)
+				position: absolute
+				top: 61px
+				right: -35.5px
+				height: 4px
+				background-color: $blue1
+				width: 70px
+				transform: rotateZ(-90deg)
+			//top right right
+			&:nth-child(9)
+				position: absolute
+				top: 0px
+				right: 25px
+				height: 4px
+				background-color: $blue1
+				width: 70px
+
+
+			//bottom left
+			//bottom left edge
+			&:nth-child(10)
+				position: absolute
+				bottom: 13px
+				left: -7px
+				height: 4px
+				background-color: $blue1
+				width: 40px
+				transform: rotateZ(45deg)
+			//bottom left top
+			&:nth-child(11)
+				position: absolute
+				bottom: 61px
+				left: -35.5px
+				height: 4px
+				background-color: $blue1
+				width: 70px
+				transform: rotateZ(-90deg)
+			//bottom left bottom
+			&:nth-child(12)
+				position: absolute
+				bottom: 0px
+				left: 25px
+				height: 4px
+				background-color: $blue1
+				width: 70px
+
+			//bottom right
+			//bottom right edge
+			&:nth-child(13)
+				position: absolute
+				bottom: 13px
+				right: -7px
+				height: 4px
+				background-color: $blue1
+				width: 40px
+				transform: rotateZ(-45deg)
+			//bottom right top
+			&:nth-child(14)
+				position: absolute
+				bottom: 61px
+				right: -35.5px
+				height: 4px
+				background-color: $blue1
+				width: 70px
+				transform: rotateZ(-90deg)
+			//bottom right bottom
+			&:nth-child(15)
+				position: absolute
+				bottom: 0px
+				right: 25px
+				height: 4px
+				background-color: $blue1
+				width: 70px
+				
+	.drag-hint
+		position: absolute
+		bottom: 10px
+		width: 30px
+		img
+			max-width: 30px !important
+	.small-menu-container
+		position: absolute
+		top: 0px
+		right: 0px
+		z-index: 999
+		&:hover
+			cursor: pointer
+		.menu-word 
+			position: absolute
+			font-size: 0.5em
+			font-family: "proxima-nova"
+			width: 100px
+			text-align: center
+			display: -webkit-box
+			display: -webkit-flex
+			display: -ms-flexbox
+			display: flex
+			-webkit-box-pack: center
+			-webkit-justify-content: center
+			-ms-flex-pack: center
+			height: 100px
+			justify-content: center
+			color: white
+			right: 40px
+			top: 40px
+			font-family: $font1
+			font-size: 0.7em
+			color: white
+			.word 
+				height: 115px
+				position: absolute
+				display: -webkit-box
+				display: -webkit-flex
+				display: -ms-flexbox
+				display: flex
+				-webkit-box-align: end
+				-webkit-align-items: flex-end
+				-ms-flex-align: end
+				align-items: flex-end
+			.word:nth-child(1) 
+				-webkit-transform: rotate(50deg)
+				-ms-transform: rotate(50deg)
+				transform: rotate(50deg)
+			.word:nth-child(2) 
+				-webkit-transform: rotate(30deg)
+				-ms-transform: rotate(30deg)
+				transform: rotate(30deg)
+			.word:nth-child(3) 
+				-webkit-transform: rotate(10deg)
+				-ms-transform: rotate(10deg)
+				transform: rotate(10deg)
+			.word:nth-child(4) 
+				-webkit-transform: rotate(-10deg)
+				-ms-transform: rotate(-10deg)
+				transform: rotate(-10deg)
+			.word:nth-child(5) 
+				-webkit-transform: rotate(-30deg)
+				-ms-transform: rotate(-30deg)
+				transform: rotate(-30deg)
+			.word:nth-child(6) 
+				-webkit-transform: rotate(-50deg)
+				-ms-transform: rotate(-50deg)
+				transform: rotate(-50deg)
+	#projectsChange
+		.wrapper
+			max-height: 100%
+			position: relative
+			height: 100%
+			width: 100%
+			
+			overflow: hidden
+			.content-wrapper
+				position: absolute
+				height: 60%
+				width: 100%
+				z-index: 99
+			.show-all-projects
+				padding-right: 15px
+				height: 100%
+				width: 90%
+				left: 5%
+				margin-bottom: 1em
+				margin-top: 1em
+				position: relative
+				overflow-x: hidden
+				overfow-y: scroll
+				.single-project
+					margin-bottom: 1em
+					&.project-active
+						.more-information
+							transform: scaleY(1)
+							height: auto
+							transition: all 0.35s ease
+							transition-delay: 0.1s
+
+					.logo
+						position: relative
+						z-index: 99
+						text-align: center
+						&:hover
+							cursor: pointer
+						img
+							z-index: 9999
+							padding-top: 1em
+							padding-bottom: 1em
+						.background
+							position: absolute
+							width: 100%
+							height: 100%
+							z-index: -1
+							border-top-left-radius: 10px
+							border-bottom-right-radius: 10px
+							&:after
+								content: ''
+								position: absolute
+								top: 0px
+								left: 0px
+								height: 2px
+								width: 100%
+								background-color: $blue1
+								opacity: 0.5
+							&:before
+								content: ''
+								position: absolute
+								bottom: 0px
+								left: 0px
+								height: 2px
+								width: 100%
+								background-color: $blue1
+								opacity: 0.5
+
+
+					.more-information
+						transform: scaleY(0)
+						height: 0px
+						overflow: hidden
+						transition: all 0s ease
+						transition-delay: 0.1s
+
+						.single-tech-list
+							h3
+								color: white
+								padding-top: 1em
+								font-family: $font2
+								padding-bottom: 1em
+
+							ul
+								display: flex
+								background-color: $blue3
+								padding: 1em
+								justify-content: space-between
+								
+
+						.button
+							width: 100%
+							text-align: center
+							a
+								width: 25%
+								margin: 0 auto
+
+	::-webkit-scrollbar 
+	  width: 10px
+	  height: 20px !important
+	  z-index: 9999
+	::-webkit-scrollbar-track 
+	  background: $blue3
+	::-webkit-scrollbar-thumb 
+	  background: $blue1
+
+
+
+
+
+
+			
+
+
+
+
